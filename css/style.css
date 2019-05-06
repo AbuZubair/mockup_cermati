@@ -1,0 +1,125 @@
+body{
+    overflow-x: hidden;
+    background-color: #e5e5e5;
+    color:#333;
+}
+
+.notif-panel{
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+}
+
+.fixed {position:fixed; top:0; left:0;width:100%;height:80px;z-index: 100;}
+
+.page-header{
+    width: 100%;
+    height:540px;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.page-header::before {
+    background-image: url("../image/work-desk__dustin-lee.jpg");
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.8;
+    -webkit-filter: contrast(200%) brightness(0.30); /* Safari 6.0 - 9.0 */
+    filter: contrast(200%) brightness(0.30);
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#logo{
+    position: absolute;
+    left:30px;
+    top:30px;
+
+}
+
+.navbar-fixed-top {
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-width: 0 0 1px !important;
+    z-index: 1030;
+}
+
+.card{
+    background-color: #e5e5e5;
+    height:12em;
+    margin:10px 0;
+}  
+
+.card:hover{
+    cursor: pointer;
+}
+
+
+.card:hover .card-logo{
+    font-size: 28px;
+}
+
+.card-logo{
+    position: absolute;
+    top:15px;
+    right:10px;
+    opacity: 0.4;
+
+    transition: all .2s ease-in-out;
+}
+
+#newsletter{
+    display: none;
+    position: fixed;
+    bottom: -20px;
+    width: 100%;
+    opacity: 0.9;
+    filter: alpha(opacity=90)
+}
+
+#newsletter .card{
+    max-width: 640px;
+}
+
+footer{
+    background-color: #021433;
+    color: white;
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .card{
+        height:14em;
+    }  
+    #newsletter{
+        bottom: 0;
+    }
+
+    #newsletter .card{
+        height:100%;
+        margin:0 !important;
+    }
+
+    #newsletter .card .row div{
+        margin:5px 0 !important;
+    }
+}
